@@ -56,7 +56,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var id = setInterval('plusSlides(1);', 3000); //call test every 1 seconds.
+var id = setInterval('plusSlides(1);', 5000); //call test every 1 seconds.
 var bestView = 8;
 var bestViewSpace = 30;
 
