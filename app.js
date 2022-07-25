@@ -4,6 +4,7 @@ const navSlide = () => {
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
+
         //toggle nav
         nav.classList.toggle('nav-active');
 
@@ -56,3 +57,69 @@ function showSlides(n) {
 }
 
 var id = setInterval('plusSlides(1);', 3000); //call test every 1 seconds.
+var bestView = 8;
+var bestViewSpace = 30;
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: bestView,
+  spaceBetween: bestViewSpace,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+function update(){
+  window.addEventListener('resize', () =>{
+    if(window.innerWidth <= 768){
+      bestView = 3;
+      bestViewSpace = 15;
+
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: bestView,
+        spaceBetween: bestViewSpace,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    }else{
+      bestView = 8;
+      bestViewSpace = 30;
+
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: bestView,
+        spaceBetween: bestViewSpace,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    }
+  });
+}
+
+update();

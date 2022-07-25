@@ -19,6 +19,7 @@ nav {
   height: 65px;
   background-color: rgb(37%, 37%, 37%, 0.6);
   font-family: "Roboto", sans-serif;
+  z-index: 10;
 }
 
 .logo img {
@@ -307,6 +308,9 @@ h3 {
 }
 
 /* carousel part */
+
+/* prod-carousel part*/
+
 .prod-section {
   height: 30%;
   display: flex;
@@ -334,7 +338,7 @@ h3 {
 
 .card img {
   margin: auto;
-  width: 120px;
+  width: 60px;
 }
 
 .card a {
@@ -426,9 +430,6 @@ input[type="email"] {
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-input[type="email"]:hover {
 }
 
 input[type="submit"] {
