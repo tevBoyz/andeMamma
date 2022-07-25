@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <title>Ande Mamma</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <a href="#home">
+          <img src="/src/AndE Mamma-LOGO.svg" alt="" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#">Products</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#contact-section">Contact</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <section
+      class="welcome-section"
+      id="home"
+      style="padding: 0px; margin: 0px"
+    >
+      <img src="/src/welcome-cropped.jpg" alt="" />
+    </section>
+
+    <section class="abt-section" id="about" style="padding: 0px; margin: 0px">
+      <div class="abt-image">
+        <img src="/src/abt-image.jpg" alt="" />
+      </div>
+
+      <div class="abt-text">
+        <h1>ABOUT US</h1>
+        <h2>Who We Are</h2>
+        <h3>
+          AndE Mamma is an Eco-Social Business Organization with a Great Dream
+          of Transforming Ethiopians’ and Africans’ low Human Development Index
+          to greater than 0.8. AndE Mamma continually creates and implements
+          projects that empower millions of struggling Mammas (mothers with
+          daily income below $2) all over Africa while caring for the
+          environment. AndE Mamma believes in sustainable values of Community
+          Empowerment and Sustainable Environment encompassed in the core value:
+          The Spirit of Mamma’s Love with built-in values of Empowerment,
+          Caring, and Life-Giving. AndE Mamma was founded in August 2020 and
+          launched the Spirit of Mamma’s Love project as of January 2021.
+        </h3>
+
+        <a href="#">Learn More</a>
+      </div>
+    </section>
+
+    <section>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="/src/1.jpg" style="width: 100%" />
+          <div class="text">
+            <h2>USED PAPER COLLECTION</h2>
+            <h3>
+              Ethiopia consumes around 220,000 tons of paper per annum, but able
+              to collect only 10% of a total consumption.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="src/2.jpg" style="width: 100%" />
+          <div class="text">
+            <h2>CULTURAL HANDCRAFTED PRODUCTS</h2>
+            <h3>
+              Upcycling through handcrafting is barely existing in Ethiopia and
+              Africa.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="src/3.jpg" style="width: 100%" />
+          <div class="text">
+            <h2>COMMUNITY EMPOWERMENT</h2>
+            <h3>
+              Community Empowerment is one of the core beliefs of AndE Mamma.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="src/4.jpg" style="width: 100%" />
+          <div class="text">
+            <h2>SECURE DOCUMENT DESTRUCTION</h2>
+            <h3>
+              Used paper in stores for many years which they regularly dispose
+              of through incineration due to Confidentiality and Lack of
+              Awareness.
+            </h3>
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The dots/circles -->
+        <div class="carousel-indicator" style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <section class="prod-section">
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper prod-view">
+          <div class="swiper-slide card">
+            <img src="src/products/1.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/2.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/3.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/4.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/5.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/6.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/7.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/8.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/9.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/10.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/9.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+
+          <div class="swiper-slide card">
+            <img src="src/products/10.png" alt="Avatar" />
+            <a class="card-popup" href="#">Details</a>
+            <a class="card-text" href="#">Mamma Basket</a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contact-section" class="contact-section">
+      <h1>CONTACT US</h1>
+      <div class="message-div">
+        <form action="/action_page.php">
+          <label for="fname">Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="fullname"
+            placeholder="Your fullname.."
+          />
+
+          <label for="lname">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email address.."
+          />
+
+          <label for="message">Message</label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Your message.."
+          />
+
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 8,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
