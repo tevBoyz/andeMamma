@@ -479,7 +479,6 @@ input[type="submit"]:hover {
   font-size: 20px;
   margin: 0;
   padding: 30px;
-  cursor: pointer;
   transition: 0.3s ease-in;
 }
 
