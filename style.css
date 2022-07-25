@@ -452,3 +452,49 @@ input[type="submit"]:hover {
   padding-right: 200px;
   padding-top: 30px;
 }
+
+.footer-section {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.x {
+  color: black;
+  font-size: 30px;
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.x:hover {
+  color: #717171;
+}
+
+.phone i .copyright i {
+  color: black;
+  font-size: 20px;
+  margin: 0;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.phone i {
+  color: #000000;
+}
+
+.phone a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000000;
+}
+
+.copyright a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #000000;
+}
