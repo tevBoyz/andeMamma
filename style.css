@@ -356,12 +356,18 @@ h3 {
 .card img {
   margin: auto;
   width: 60px;
+  transition: 0.3s ease-in;
+}
+
+.card img:hover {
+  width: 100px;
 }
 
 .card a {
   text-decoration: none;
   text-align: center;
   color: black;
+  transition: 0.3s ease-in;
 }
 
 .card-popup {
@@ -378,8 +384,9 @@ h3 {
 }
 
 .card:hover .card-popup {
+  width: 80px;
   opacity: 0.6;
-  transform: translatey(0%);
+  transform: translateY(0%);
 }
 
 .swiper-button-prev {
