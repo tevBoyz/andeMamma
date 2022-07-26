@@ -161,6 +161,7 @@ function getData(x){
     let data = {img : 'src/products/6.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
     'and typesetting industry. Lorem Ipsum has been the industry\'s' +
      'standard dummy text ever since the 1500s,'};
+     return data;
   }
   else if (x == 7){
     let data = {img : 'src/products/7.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
@@ -194,7 +195,6 @@ function getData(x){
 
 
 function on(a) {
-  console.log(getData(a))
   document.getElementById("overlay").style.display = "block";
   document.getElementById('item-image').src = getData(a)['img'];
   document.getElementById('item-title').innerHTML = getData(a)['title'];
@@ -222,3 +222,21 @@ function closeBothOverlays(){
   off();
   off2();
 }
+
+//Contact us secton to send email
+
+// function sendEmail(){
+//   Email.send({
+//     Host : "smtp.gmail.com",
+//     Username : "andimamma2022@gmail.com",
+//     Password : "andimammadave22",
+//     To : "ddaavveeggeerrmmii@gmail.com",
+//     From : document.getElementById('email').value,
+//     Subject : "Contact from website",
+//     Body : "Name: " + document.getElementById('fname').value 
+//     + "\nEmail: " + document.getElementById('email').value
+//     + "\nMessage: " + document.getElementById('message').value
+// }).then(
+//   message => alert("Message sent Successfully.")
+// );
+// }
