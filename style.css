@@ -137,6 +137,7 @@ nav {
 .abt-section {
   width: 100%;
   display: flex;
+  overflow: hidden;
 }
 
 .abt-image {
