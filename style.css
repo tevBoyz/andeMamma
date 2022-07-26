@@ -524,3 +524,82 @@ input[type="submit"]:hover {
   font-size: 15px;
   color: #000000;
 }
+
+/* overlay part */
+
+#overlay2 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 800px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.close-button {
+  text-align: end;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+.close-button a {
+  padding: 25px;
+  margin-top: 10px;
+}
+
+.close-button i {
+  font-size: 25px;
+}
+
+.content-viewer {
+  display: flex;
+  padding: 30px;
+}
+
+.content-viewer img {
+  width: min-content;
+  height: min-content;
+  margin: 10px;
+}
+
+.content-viewer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-viewer-text a {
+  text-decoration: none;
+  color: #000000;
+  margin: 10px;
+}
+
+.item-title {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.item-description {
+  font-size: 18px;
+  text-align: justify;
+  padding-top: 10px;
+  line-height: 25px;
+}

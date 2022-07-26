@@ -23,7 +23,8 @@
 
     <title>Ande Mamma</title>
   </head>
-  <body>
+  <body></body>
+
     <nav id="navbar">
       <div class="logo">
         <a href="#home">
@@ -53,6 +54,34 @@
         <div class="line3"></div>
       </div>
     </nav>
+
+    <div id="overlay">
+      <div class="close-button">
+        <a onclick="closeBothOverlays()" ><i class="fa-solid fa-xmark"></i></a>
+      </div>
+
+      <div class="content-viewer">
+
+        <img id="item-image" src="/andeMamma/src/products/1.png" alt="product">
+        <div class="content-viewer-text">
+          <a id="item-title" class="item-title">Mamma Basket</a>
+          <a id="item-description" class="item-description">Lorem Ipsum is simply dummy text of the printing
+             and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer
+               took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap
+                 into electronic typesetting, remaining essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div id="overlay2" onclick="off2()">
+    </div>
 
     <section
       class="welcome-section"
@@ -157,73 +186,74 @@
     <section class="prod-section">
       <div class="swiper mySwiper container">
         <div class="swiper-wrapper prod-view">
-          <div class="swiper-slide card">
+
+          <div class="swiper-slide card" onclick="overlayBoth(1)">
             <img src="src/products/1.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(2)">
             <img src="src/products/2.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(3)">
             <img src="src/products/3.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(4)">
             <img src="src/products/4.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(5)">
             <img src="src/products/5.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(6)">
             <img src="src/products/6.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(7)">
             <img src="src/products/7.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(8)">
             <img src="src/products/8.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(9)">
             <img src="src/products/9.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(10)">
             <img src="src/products/10.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(9)">
             <img src="src/products/9.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
 
-          <div class="swiper-slide card">
+          <div class="swiper-slide card" onclick="overlayBoth(10)">
             <img src="src/products/10.png" alt="Avatar" />
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>

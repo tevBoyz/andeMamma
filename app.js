@@ -123,3 +123,102 @@ function update(){
 }
 
 update();
+
+//overlay part
+
+function getData(x){
+  if (x == 1){
+    let data = {img : 'src/products/1.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 2){
+    let data = {img : 'src/products/2.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 3){
+    let data = {img : 'src/products/3.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 4){
+    let data = {img : 'src/products/4.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 5){
+    let data = {img : 'src/products/5.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 6){
+    let data = {img : 'src/products/6.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+  }
+  else if (x == 7){
+    let data = {img : 'src/products/7.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 8){
+    let data = {img : 'src/products/8.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 9){
+    let data = {img : 'src/products/9.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+    'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+     'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else if (x == 10){
+    let data = {img : 'src/products/10.png', title: 'mamma basket', desc: 'Lorem Ipsum is simply dummy text of the printing' +
+             'and typesetting industry. Lorem Ipsum has been the industry\'s' +
+              'standard dummy text ever since the 1500s,'};
+    return data;
+  }
+  else{
+    let data = {img : '', title: '', desc: ''};
+    return data;
+  }
+}
+
+
+function on(a) {
+  console.log(getData(a))
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById('item-image').src = getData(a)['img'];
+  document.getElementById('item-title').innerHTML = getData(a)['title'];
+  document.getElementById('item-description').innerHTML = getData(a)['desc'];
+
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+function on2() {
+  document.getElementById("overlay2").style.display = "block";
+}
+
+function off2() {
+  document.getElementById("overlay2").style.display = "none";
+}
+
+function overlayBoth(a){
+  on(a);
+  on2();
+}
+
+function closeBothOverlays(){
+  off();
+  off2();
+}
