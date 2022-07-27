@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobileresponsiveness.css" />
+    <link rel="stylesheet" href="mobileresponsivenessaboutpage.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
     <!-- Link Swiper's CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    /> -->
+
+      <link rel="stylesheet" href="cust.css">
 
     <link
       rel="stylesheet"
@@ -26,6 +29,13 @@
   <body></body>
 
     <nav id="navbar">
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
       <div class="logo">
         <a href="#home">
           <img src="src/AndE Mamma-LOGO.svg" alt="" />
@@ -48,11 +58,7 @@
           <a href="#about">About</a>
         </li>
       </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+      
     </nav>
 
     <div id="overlay">
@@ -80,7 +86,7 @@
     </div>
 
 
-    <div id="overlay2" onclick="off2()">
+    <div id="overlay2" onclick="closeBothOverlays()">
     </div>
 
     <section
@@ -246,25 +252,13 @@
             <a class="card-popup" href="#">Details</a>
             <a class="card-desc" href="#">Mamma Basket</a>
           </div>
-
-          <div class="swiper-slide card" onclick="overlayBoth(9)">
-            <img src="src/products/9.png" alt="Avatar" />
-            <a class="card-popup" href="#">Details</a>
-            <a class="card-desc" href="#">Mamma Basket</a>
-          </div>
-
-          <div class="swiper-slide card" onclick="overlayBoth(10)">
-            <img src="src/products/10.png" alt="Avatar" />
-            <a class="card-popup" href="#">Details</a>
-            <a class="card-desc" href="#">Mamma Basket</a>
-          </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next">
+        </div>
+        <div class="swiper-button-prev">
+        </div>
       </div>
     </section>
-
-    <hr />
 
     <section id="contact-section" class="contact-section">
       <h1>CONTACT US</h1>

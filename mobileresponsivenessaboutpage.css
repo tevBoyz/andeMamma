@@ -1,0 +1,128 @@
+@media screen and (max-width: 768px) {
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  body {
+    padding-top: 70px;
+  }
+  .about-section {
+    margin: 0;
+    width: 100%;
+    height: 600px;
+  }
+
+  .about-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container img {
+    display: table-cell;
+    width: 75%;
+    height: 500px;
+    margin-left: 20px;
+  }
+
+  .abtt-text {
+    display: table-cell;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 80px;
+    font-family: "Roboto", sans-serif;
+    color: black;
+  }
+
+  .abtt-text h2 {
+    color: #4ab444;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .abtt-text h3 {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .abtt-text h4 {
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .profile-images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+  }
+
+  .main-staff {
+    display: none;
+  }
+
+  .group-container {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .altog {
+    margin-top: 150px;
+    width: 90%;
+    height: 300px;
+    border-radius: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .row-1 {
+    margin-top: 300px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .profile a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 250px;
+    height: 300px;
+    border-radius: 30%;
+  }
+
+  .contact-section {
+    margin-top: 1100px;
+  }
+}

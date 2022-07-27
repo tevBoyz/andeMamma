@@ -184,12 +184,14 @@
   /* prod-carousel part*/
 
   .prod-section {
-    height: 30%;
+    height: fit-content;
     display: flex;
     justify-content: baseline;
   }
 
   .container {
+    width: 75vw;
+    height: 600px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -225,7 +227,7 @@
     height: 50px;
     background-color: rgb(37%, 37%, 37%, 0.2);
     transition: 0.3s ease-in;
-    transform: translatey(100%);
+    transform: translateY(100%);
     vertical-align: center;
     line-height: 50px;
   }
@@ -251,9 +253,11 @@
   /* prod-carousel part*/
 
   .contact-section {
-    width: 100%;
+    padding: 0%;
+    background-color: #717171;
+    width: 100vw;
     height: 300px;
-    justify-content: start;
+    justify-content: left;
   }
 
   .contact-section h1 {
@@ -272,7 +276,6 @@
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
   }
 
   input[id="message"] {
@@ -316,5 +319,89 @@
     padding-left: 200px;
     padding-right: 200px;
     padding-top: 30px;
+  }
+
+  /* overlay part */
+
+  #overlay2 {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 400px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .close-button {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  .close-button a {
+    padding: 20px;
+    margin-top: 8px;
+  }
+
+  .close-button i {
+    font-size: 20px;
+  }
+
+  .content-viewer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .content-viewer img {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+  }
+
+  .content-viewer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-viewer-text a {
+    text-decoration: none;
+    color: #000000;
+    margin: 8px;
+  }
+
+  .item-title {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+
+  .item-description {
+    font-size: 15px;
+    text-align: justify;
+    padding-top: 5px;
+    line-height: 20px;
   }
 }
