@@ -483,7 +483,7 @@ input[type="email"] {
   border-radius: 4px;
 }
 
-input[type="submit"] {
+.send-button {
   width: 100%;
   background-color: #4ab444;
   color: white;

@@ -60,70 +60,59 @@ var id = setInterval('plusSlides(1);', 5000); //call test every 1 seconds.
 var bestView = 8;
 var bestViewSpace = 30;
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: bestView,
-  spaceBetween: bestViewSpace,
-  slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+
+//sets the product line in accordance with screen size
+function fixProdLine(){
+  if(window.innerWidth <= 768){
+    bestView = 3;
+    bestViewSpace = 15;
+
+    swiper = new Swiper(".mySwiper", {
+      slidesPerView: bestView,
+      spaceBetween: bestViewSpace,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+  }else{
+    bestView = 8;
+    bestViewSpace = 30;
+
+    swiper = new Swiper(".mySwiper", {
+      slidesPerView: bestView,
+      spaceBetween: bestViewSpace,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
+
+//to set the product slide when initially loaded
+fixProdLine();
 
 function update(){
   window.addEventListener('resize', () =>{
-    if(window.innerWidth <= 768){
-      bestView = 3;
-      bestViewSpace = 15;
-
-      swiper = new Swiper(".mySwiper", {
-        slidesPerView: bestView,
-        spaceBetween: bestViewSpace,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-    }else{
-      bestView = 8;
-      bestViewSpace = 30;
-
-      swiper = new Swiper(".mySwiper", {
-        slidesPerView: bestView,
-        spaceBetween: bestViewSpace,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-    }
-  });
+    fixProdLine();
+    //to set the product line when the screen is resized
+    });
 }
 
 update();
@@ -227,20 +216,36 @@ function closeBothOverlays(){
   off2();
 }
 
-//Contact us secton to send email
 
-// function sendEmail(){
-//   Email.send({
-//     Host : "smtp.gmail.com",
-//     Username : "andimamma2022@gmail.com",
-//     Password : "andimammadave22",
-//     To : "ddaavveeggeerrmmii@gmail.com",
-//     From : document.getElementById('email').value,
-//     Subject : "Contact from website",
-//     Body : "Name: " + document.getElementById('fname').value 
-//     + "\nEmail: " + document.getElementById('email').value
-//     + "\nMessage: " + document.getElementById('message').value
-// }).then(
-//   message => alert("Message sent Successfully.")
-// );
-// }
+//for details page
+
+function getDetail(keyword){
+  if (keyword == 'usedpaper'){
+    data = {title: "Used Paper Collection", left_side: "LEFT SIDE1", right_side: "RIGTH SIDE1"};
+    return data;
+  }
+  else if (keyword == 'culteral'){
+    data = {title: "Cultural Handrafted Products", left_side: "LEFT SIDE2", right_side: "RIGTH SIDE2"};
+    return data;
+  }
+  else if (keyword == 'community'){
+    data = {title: "Community Empowerment", left_side: "LEFT SIDE3", right_side: "RIGTH SIDE3"};
+    return data;
+  }
+  else if (keyword == 'securedoc'){
+    data = {title: "Secure Document Destruction", left_side: "LEFT SIDE4", right_side: "RIGTH SIDE4"};
+    return data;
+  }
+}
+
+function toDetails(keyword){
+  data = getDetail(keyword);
+
+  document.getElementById('det-title').innerHTML = data['title'];
+  const c = getElementById('left-side');
+  c.insertAdjacentText('beforeend', data[left_side]);
+  c = getElementById('right-side');
+  c.insertAdjacentText('beforeend', data[rightt_side]);
+  // document.getElementById('left-side').innerHTML = data['left_side'];
+  // document.getElementById('left-side').innerHTML = data['right_side'];
+}

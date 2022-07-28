@@ -123,6 +123,12 @@
   }
 
   .contact-section {
-    margin-top: 1100px;
+    position: absolute;
+    top: 420%;
+  }
+
+  .footer-section {
+    position: 5 absolute;
+    top: 500%;
   }
 }
