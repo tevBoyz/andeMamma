@@ -336,33 +336,46 @@ h3 {
 
 .container {
   width: 75vw;
-  height: 600px;
+  height: fit-content;
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
+}
+
+.prod-view {
+  position: relative;
+  height: fit-content;
+  width: 100%;
 }
 
 .card {
-  width: 200px;
-  margin: auto;
+  flex-shrink: 0;
+  width: 150px;
+  height: 250px;
+  margin: 5px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  overflow: hidden;
   border-radius: 20px;
+  top: 100%;
 }
 
 .card img {
   margin: auto;
-  width: 80px;
-  transition: 0.3s ease-in;
+  width: 90px;
+  height: min-content;
+  object-fit: cover;
+  transform: translateY(0%);
+  transition: 0.2s ease-in;
 }
 
 .card img:hover {
-  width: 120px;
+  transform: translateY(-25%) scale(1.1);
+}
+
+.card:hover .card img {
+  transform: translateY(-25%) scale(1.2);
 }
 
 .card a {
@@ -370,8 +383,13 @@ h3 {
   text-align: center;
   color: black;
   transition: 0.3s ease-in;
+  position: absolute;
+  bottom: 0%;
 }
 
+.card-desc {
+  vertical-align: bottom;
+}
 .card-popup {
   opacity: 0;
   width: 100%;
@@ -379,15 +397,16 @@ h3 {
   background-color: rgb(37%, 37%, 37%, 0.2);
   border: #717171;
   border-radius: 10%;
-  transition: 0.3s ease-in;
+  transition: 0.5s ease-in;
   transform: translatey(100%);
   vertical-align: center;
   line-height: 50px;
+  margin-bottom: 20px;
 }
 
 .card:hover .card-popup {
   width: 80px;
-  opacity: 0.6;
+  opacity: 0.8;
   transform: translateY(0%);
 }
 
