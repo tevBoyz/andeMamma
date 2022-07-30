@@ -28,20 +28,22 @@ nav {
   width: 300px;
   height: 100px;
   border-radius: 10%;
+  padding-left: 10px;
   overflow: hidden;
   margin-top: -6px;
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-evenly;
-  width: 50%;
+  width: 40%;
+  padding-right: 50px;
   opacity: 0.6;
   transition: 0.2s ease-in;
 }
 
 .nav-links li {
   list-style: none;
+  padding: 15px;
 }
 
 .nav-links a {
@@ -101,7 +103,7 @@ nav {
     right: 0px;
     height: 100vh;
     top: 0;
-    background-color: #ffffff;
+    background-color: #fffae0;
     opacity: 1;
     display: flex;
     flex-direction: column;
