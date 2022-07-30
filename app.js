@@ -64,7 +64,7 @@ var bestViewSpace = 30;
 //sets the product line in accordance with screen size
 function fixProdLine(){
   if(window.innerWidth <= 768){
-    bestView = 3;
+    bestView = 1;
     bestViewSpace = 15;
 
     swiper = new Swiper(".mySwiper", {
@@ -218,34 +218,28 @@ function closeBothOverlays(){
 
 
 //for details page
-
-function getDetail(keyword){
-  if (keyword == 'usedpaper'){
-    data = {title: "Used Paper Collection", left_side: "LEFT SIDE1", right_side: "RIGTH SIDE1"};
-    return data;
-  }
-  else if (keyword == 'culteral'){
-    data = {title: "Cultural Handrafted Products", left_side: "LEFT SIDE2", right_side: "RIGTH SIDE2"};
-    return data;
-  }
-  else if (keyword == 'community'){
-    data = {title: "Community Empowerment", left_side: "LEFT SIDE3", right_side: "RIGTH SIDE3"};
-    return data;
-  }
-  else if (keyword == 'securedoc'){
-    data = {title: "Secure Document Destruction", left_side: "LEFT SIDE4", right_side: "RIGTH SIDE4"};
-    return data;
-  }
-}
-
 function toDetails(keyword){
-  data = getDetail(keyword);
+  clearInterval(id);
+  window.location.href = "details.html";
+  console.log(keyword);
+  window.scroll(0,findPos(document.getElementById(keyword)));
 
-  document.getElementById('det-title').innerHTML = data['title'];
-  const c = getElementById('left-side');
-  c.insertAdjacentText('beforeend', data[left_side]);
-  c = getElementById('right-side');
-  c.insertAdjacentText('beforeend', data[rightt_side]);
+  return true;
+  // document.getElementById('det-title').innerHTML = data['title'];
+  // const c = getElementById('left-side');
+  // c.insertAdjacentText('beforeend', data[left_side]);
+  // c = getElementById('right-side');
+  // c.insertAdjacentText('beforeend', data[rightt_side]);
   // document.getElementById('left-side').innerHTML = data['left_side'];
   // document.getElementById('left-side').innerHTML = data['right_side'];
+}
+
+function findPos(obj) {
+  var curtop = 0;
+  if (obj.offsetParent) {
+      do {
+          curtop += obj.offsetTop;
+      } while (obj = obj.offsetParent);
+  return [curtop];
+  }
 }

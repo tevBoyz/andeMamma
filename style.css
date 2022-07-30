@@ -2,22 +2,24 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 body {
   padding-top: 65px;
+  background-color: #fffae0;
+  font-family: "Poppins", sans-serif;
 }
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   padding-top: 5px;
+  padding-left: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 65px;
-  background-color: rgb(37%, 37%, 37%, 0.6);
+  background-color: rgb(37%, 37%, 37%, 0.4);
   font-family: "Roboto", sans-serif;
   z-index: 10;
 }
@@ -32,7 +34,7 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 50%;
   opacity: 0.6;
   transition: 0.2s ease-in;
@@ -48,6 +50,11 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  transition: 0.3s ease-in;
+}
+
+.nav-links a:hover {
+  color: #4ab444;
 }
 
 .nav-links:hover {
@@ -62,7 +69,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #000000;
   margin: 5px;
 }
 
@@ -75,20 +82,33 @@ nav {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-    padding-top: 0px;
+    top: 0px;
+  }
+
+  .logo img {
+    width: 200px;
+    height: 90px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: -6px;
+  }
+
+  nav {
+    height: 12vh;
   }
   .nav-links {
     position: absolute;
-    left: 0px;
-    height: 92vh;
-    top: 8vh;
+    right: 0px;
+    height: 100vh;
+    top: 0;
     background-color: #ffffff;
+    opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
   }
 
   .nav-links li {
@@ -96,6 +116,7 @@ nav {
   }
   .nav-links a {
     color: #000000;
+    font-size: 20px;
   }
   .burger {
     display: block;
@@ -158,7 +179,6 @@ nav {
   padding-top: 100px;
   padding-left: 50px;
   padding-right: 80px;
-  font-family: "Roboto", sans-serif;
   color: #ffffff;
 }
 
@@ -166,24 +186,29 @@ nav {
   font-size: 40px;
 }
 .abt-text h3 {
-  font-size: medium;
-  text-align: justify;
-  line-height: 25px;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: left;
+  line-height: 20px;
 }
 
 .abt-text a {
-  width: fit-content;
+  width: max-content;
   text-decoration: none;
   color: #4ab444;
-  font-size: medium;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 500;
   background-color: white;
   padding: 10px;
   text-align: center;
   border-radius: 10%;
+  transition: 0.3s ease-in;
 }
 
+.abt-text a:hover {
+  background-color: rgb(37%, 37%, 37%, 0.4);
+  color: #ffffff;
+}
 /* carousel part */
 
 /* Slideshow container */
@@ -234,7 +259,7 @@ nav {
 
 /* Caption text */
 .card-text {
-  background-color: #4ab444;
+  background-color: rgb(0%, 0%, 0%, 0.3);
   width: 500px;
   height: 250px;
   margin: auto;
@@ -262,6 +287,11 @@ nav {
   padding: 10px;
   text-align: center;
   border-radius: 10%;
+  transition: 0.3s;
+}
+.card-text a:hover {
+  background-color: rgb(37%, 37%, 37%, 0.5);
+  color: #ffffff;
 }
 
 h2 {
@@ -394,9 +424,8 @@ h3 {
   opacity: 0;
   width: 100%;
   height: 50px;
-  background-color: rgb(37%, 37%, 37%, 0.2);
+  background-image: linear-gradient(rgb(20%, 20%, 20%, 0.2), white);
   border: #717171;
-  border-radius: 10%;
   transition: 0.5s ease-in;
   transform: translatey(100%);
   vertical-align: center;
@@ -405,7 +434,6 @@ h3 {
 }
 
 .card:hover .card-popup {
-  width: 80px;
   opacity: 0.8;
   transform: translateY(0%);
 }
@@ -515,15 +543,17 @@ input[type="submit"]:hover {
 }
 .x {
   color: black;
-  font-size: 30px;
-  margin: 0;
-  padding: 20px;
+  width: fit-content;
+  border-radius: 50%;
+  font-size: 25px;
+  padding: 15px;
   cursor: pointer;
-  transition: 0.3s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .x:hover {
-  color: #717171;
+  color: #4ab444;
+  font-size: 23px;
 }
 
 .phone i .copyright i {
@@ -531,7 +561,6 @@ input[type="submit"]:hover {
   font-size: 20px;
   margin: 0;
   padding: 30px;
-  transition: 0.3s ease-in;
 }
 
 .phone i {
