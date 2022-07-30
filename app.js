@@ -243,3 +243,6 @@ function findPos(obj) {
   return [curtop];
   }
 }
+
+// text animation
+
