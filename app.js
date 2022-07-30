@@ -57,8 +57,8 @@ function showSlides(n) {
 }
 
 var id = setInterval('plusSlides(1);', 5000); //call test every 1 seconds.
-var bestView = 8;
-var bestViewSpace = 30;
+var bestView = 1;
+var bestViewSpace = 15;
 
 
 //sets the product line in accordance with screen size
