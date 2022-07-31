@@ -8,6 +8,7 @@ body {
   background-color: #dbf9ff;
   /* background-color: #dbf9ff; */
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 nav {
   position: sticky;
