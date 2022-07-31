@@ -313,12 +313,12 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
   }
 
   .content-viewer img {
     width: 40%;
-    height: 40%;
-    margin: 10px;
+    margin-top: 150px;
   }
 
   .content-viewer-text {
@@ -326,6 +326,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
   }
 
   .content-viewer-text a {

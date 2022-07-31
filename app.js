@@ -240,27 +240,7 @@ function findPos(obj) {
 
 // text animation
 
-function checkIframeLoaded() {
-  // Get a handle to the iframe element
-  var iframe = document.getElementById('utube');
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-  // Check if loading is complete
-  if (  iframeDoc.readyState  == 'complete' ) {
-      //iframe.contentWindow.alert("Hello");    
-      // The loading is complete, call the function we want executed once the iframe is loaded
-      setTimeout(function(){
-        setAnimationIntervals()
-        setLoop()  
-      }, 10000);
-      return;
-  } 
-
-  // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
-  window.setTimeout(checkIframeLoaded, 100);
-}
-
-checkIframeLoaded();
 
 
 function setLoop(){
@@ -294,3 +274,25 @@ function setAnimationIntervals(){
     txt4.style.animation = 'typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite'},
     21000);
 }
+
+function checkIframeLoaded() {
+  // Get a handle to the iframe element
+  var iframe = document.getElementById('utube');
+  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+  // Check if loading is complete
+  if (  iframeDoc.readyState  == 'complete' ) {
+      //iframe.contentWindow.alert("Hello");    
+      // The loading is complete, call the function we want executed once the iframe is loaded
+      setTimeout(function(){
+        setAnimationIntervals()
+        setLoop()  
+      }, 10000);
+      return;
+  } 
+
+  // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+  window.setTimeout(checkIframeLoaded, 100);
+}
+
+checkIframeLoaded();
