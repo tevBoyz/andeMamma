@@ -3,6 +3,9 @@
     font-family: "Roboto", sans-serif;
   }
   body {
+    padding-top: 10px;
+    overflow-x: hidden;
+    position: relative;
   }
   .about-section {
     margin: 0;

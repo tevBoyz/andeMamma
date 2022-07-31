@@ -1,6 +1,8 @@
 @media screen and (max-width: 768px) {
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    position: relative;
   }
 
   .welcome-section {
