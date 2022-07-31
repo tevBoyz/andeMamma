@@ -226,13 +226,6 @@ function toDetails(keyword){
   window.scroll(0,findPos(document.getElementById(keyword)));
 
   return true;
-  // document.getElementById('det-title').innerHTML = data['title'];
-  // const c = getElementById('left-side');
-  // c.insertAdjacentText('beforeend', data[left_side]);
-  // c = getElementById('right-side');
-  // c.insertAdjacentText('beforeend', data[rightt_side]);
-  // document.getElementById('left-side').innerHTML = data['left_side'];
-  // document.getElementById('left-side').innerHTML = data['right_side'];
 }
 
 function findPos(obj) {
