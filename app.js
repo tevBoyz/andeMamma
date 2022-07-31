@@ -63,7 +63,7 @@ var bestViewSpace = 15;
 
 //sets the product line in accordance with screen size
 function fixProdLine(){
-  if(window.innerWidth <= 800){
+  if(window.innerWidth <= 850){
     bestView = 1;
     bestViewSpace = 15;
 
