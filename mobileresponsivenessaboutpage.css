@@ -1,6 +1,6 @@
 @media screen and (max-width: 850px) {
   * {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
   body {
     padding-top: 10px;
@@ -64,14 +64,18 @@
   .profile-images {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: fit-content;
   }
 
-  .main-staff {
+  h2.main-staff {
+    padding-right: 30px;
+    width: fit-content;
     font-size: 30px;
+    font-weight: 500;
     text-align: center;
-    padding-left: 30px;
   }
 
   .row-1 {

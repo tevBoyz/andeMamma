@@ -56,7 +56,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var id = setInterval('plusSlides(1);', 5000); //call test every 1 seconds.
+var id = setInterval('plusSlides(1);', 5000); //call plusSlide every 1 seconds.
 var bestView = 1;
 var bestViewSpace = 15;
 
@@ -247,3 +247,57 @@ function findPos(obj) {
 
 // text animation
 
+function checkIframeLoaded() {
+  // Get a handle to the iframe element
+  var iframe = document.getElementById('utube');
+  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+  // Check if loading is complete
+  if (  iframeDoc.readyState  == 'complete' ) {
+      //iframe.contentWindow.alert("Hello");    
+      // The loading is complete, call the function we want executed once the iframe is loaded
+      setTimeout(function(){
+        setAnimationIntervals()
+        setLoop()  
+      }, 10000);
+      return;
+  } 
+
+  // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+  window.setTimeout(checkIframeLoaded, 100);
+}
+
+checkIframeLoaded();
+
+
+function setLoop(){
+  setInterval('setAnimationIntervals()', 30000);
+}
+
+function setAnimationIntervals(){
+
+  const txt1 = document.getElementById('txt-1');
+  const txt2 = document.getElementById('txt-2');
+  const txt3 = document.getElementById('txt-3');
+  const txt4 = document.getElementById('txt-4');
+
+  
+  txt4.style.display = 'none'
+  txt1.style.display = 'block'
+  txt1.style.animation = 'typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite';
+  setTimeout(() => {
+    txt1.style.display = 'none'
+    txt2.style.display = 'block'
+    txt2.style.animation = 'typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite'},
+    7000);
+  setTimeout(() => {
+    txt2.style.display = 'none'
+    txt3.style.display = 'block'
+    txt3.style.animation = 'typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite'},
+    14000);
+  setTimeout(() => {
+    txt3.style.display = 'none'
+    txt4.style.display = 'block'
+    txt4.style.animation = 'typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite'},
+    21000);
+}

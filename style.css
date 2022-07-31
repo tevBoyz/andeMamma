@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: #dbf9ff;
   /* background-color: #dbf9ff; */
   font-family: "Poppins", sans-serif;
 }
@@ -19,9 +18,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 65px;
-  background-color: rgb(37%, 37%, 37%, 0.4);
+  background-color: rgb(37%, 37%, 37%, 0.3);
   font-family: "Roboto", sans-serif;
   z-index: 10;
+
+  padding: 25px;
+  border-bottom-style: solid;
+  border-bottom-color: #4ab444;
+  border-bottom-width: 2px;
 }
 
 .logo img {
@@ -98,7 +102,12 @@ nav {
   }
 
   nav {
-    height: 12vh;
+    height: 10vh;
+
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #4ab444;
+    border-bottom-width: 2px;
   }
   .nav-links {
     position: absolute;
@@ -435,6 +444,7 @@ h3 {
   vertical-align: center;
   line-height: 50px;
   margin-bottom: 20px;
+  pointer-events: none;
 }
 
 .card:hover .card-popup {
@@ -610,6 +620,7 @@ input[type="submit"]:hover {
   background-color: white;
   z-index: 10;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .close-button {
@@ -630,18 +641,34 @@ input[type="submit"]:hover {
 
 .content-viewer {
   display: flex;
-  padding: 30px;
+  padding: 100px;
+  position: relative;
 }
 
 .content-viewer img {
-  width: min-content;
+  width: fit-content;
   height: min-content;
-  margin: 10px;
+  margin-top: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
 }
 
 .content-viewer-text {
+  width: 45%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
 .content-viewer-text a {
@@ -670,23 +697,98 @@ input[type="submit"]:hover {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  position: relative;
 }
 
 .landing-page iframe {
   pointer-events: none;
-  position: relative;
+  position: absolute;
   transform: scale(1.2);
 }
 
-.landing-page a {
-  font-size: 100px;
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* text animation part */
 
-  text-decoration: none;
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(20%, 20%, 20%, 0.6);
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+}
+
+#txt-1 {
+  display: none;
+
+  font-size: 80px;
   color: #ffffff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #4ab444; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+#txt-2 {
+  display: none;
+  font-size: 50px;
+  color: #ffffff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #4ab444; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+#txt-3 {
+  display: none;
+  font-size: 70px;
+  color: #ffffff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #4ab444; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+#txt-4 {
+  display: none;
+
+  font-size: 70px;
+  color: #ffffff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #4ab444; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+}
+
+.special-text {
+  color: #4ab444;
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4ab444;
+  }
 }
